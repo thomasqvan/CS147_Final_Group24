@@ -11,7 +11,7 @@ app = Flask(__name__)
 def hello():
     print(request.args.get("var"))
 
-    with open('testing.csv', 'a', newline='') as csvfile:
+    with open('data.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow([int(request.args.get("var") or 0)])
 
